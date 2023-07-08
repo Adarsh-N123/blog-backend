@@ -133,7 +133,7 @@ exports.getonepost = (req, res) => {
 };
 exports.getadmins = (req, res) =>{
        res.json({"admins":["adarshkln5@gmail.com","atharva.bhanage.20042@iitgoa.ac.in"]});
-}
+};
 
 exports.updateposts = (req, res) => {
   const q = 'UPDATE posts SET "title" = $1, "description" = $2, "img" = $3,"date" = CURRENT_DATE,"time-stamp"=CURRENT_TIME WHERE "idposts" = $4';
