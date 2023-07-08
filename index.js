@@ -1,7 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const postroutes = require("./routes/posts.js");
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use("/api/posts", postroutes);
 app.get("/api/admins", (req, res) => {
