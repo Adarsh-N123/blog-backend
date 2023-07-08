@@ -83,10 +83,11 @@ const { json } = require("express");
 const pool = require("../db.js");
 
 exports.addposts = (req, res) => {
+       const { title, description, img, category, video } = req.body;
   const q = 'INSERT INTO posts("title", "description", "img", "category", "video") VALUES ($1, $2, $3, $4, $5)';
 
   const values = [
-    "second", "second post", " ", "cloud", ""
+    title, description, img, category, video
   ];
 
   pool.query(q, values, (err, data) => {
