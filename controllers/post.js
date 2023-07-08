@@ -132,7 +132,7 @@ exports.getonepost = (req, res) => {
   });
 };
 exports.getadmins = (req, res) =>{
-       res.json({"admins":["adarshkln5@gmail.com","atharva.bhanage.20042@iitgoa.ac.in"]});
+       res.status(200).json({"admins":["adarshkln5@gmail.com","atharva.bhanage.20042@iitgoa.ac.in"]});
 };
 
 exports.updateposts = (req, res) => {
