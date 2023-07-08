@@ -9,6 +9,12 @@ app.get("/api/admins", (req, res) => {
   res.json(data); // Sending a JSON response
 });
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  next();
+});
+
 app.listen(8000, () => {
   console.log('connected');
 });
