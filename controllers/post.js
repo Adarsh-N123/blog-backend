@@ -138,7 +138,7 @@ exports.getadmins = (req, res) =>{
 
 exports.updateposts = (req, res) => {
        const { title, description, img } = req.body;
-  const q = 'UPDATE posts SET "title" = $1, "description" = $2, "img" = $3,"date" = CURRENT_DATE,"time-stamp"=CURRENT_TIME WHERE "idposts" = $4';
+  const q = 'UPDATE posts SET "title" = $1, "description" = $2, "img" = $3,"date" = CURRENT_DATE,"time"=CURRENT_TIME WHERE "idposts" = $4';
 
   const values = [title,description,img, req.params.id];
   
